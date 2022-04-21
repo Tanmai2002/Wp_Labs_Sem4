@@ -1,0 +1,34 @@
+
+body{
+    background-color: rgba(161, 245, 245, 0.97);
+}
+nav{
+    background-color: aqua;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li a{
+    margin: 10px;
+    text-decoration: none;
+}
+nav ul li{
+    padding: 15px;
+}
+#about{
+    background-color: azure;
+    padding: 50px;
+    border-radius: 15px;
+    border-style: outset;
+    display: flexbox;
+    justify-content: center;
+}
+
+#about h2{
+    display: flex;
+    justify-content: center;
+}
+aside{
+    font-size: small;
+}
