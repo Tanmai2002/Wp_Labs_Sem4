@@ -1,23 +1,30 @@
 import logo from './logo.svg';
+import React,{useState} from 'react'
 import './App.css';
 
+
 function App() {
+  const [celcius, setcelcius] = useState(0);
+  const [Farhenite, setFarhenite] = useState(32);
+  let Celcius2Farhenite=(event)=>{
+    let i= parseInt(event.target.value);
+    setcelcius(i);
+    setFarhenite(i*9/5+32);
+  }
+  let Farhenite2Celcius=(event)=>{
+    let i= parseInt(event.target.value);
+    setFarhenite(i);
+    setcelcius((i-32)*5/9);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Fahrenheit- Celsius Converter</h1>
+      <div>
+        <h2>Celsius</h2>
+        <input type='number' value={celcius} onChange={Celcius2Farhenite}/>
+        <h2>Fahrenheit</h2>
+        <input type='number' value={Farhenite} onChange={Farhenite2Celcius}/>
+      </div>
     </div>
   );
 }
